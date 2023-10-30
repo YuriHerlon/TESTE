@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/logofivecon.png.png">
+
+    <script type="text/javascript">
+
+        function mostravalor(componente) {
+            var altura = componente.getAttribute('data-altura');
+            var idade = componente.getAttribute('data-idade')
+            alert(altura + idade);
+        }
+
+    </script>
+
+</head>
+
+<header class="header">
+    <h1>TeStE aTiViDaDe</h1>
+    <span class="material-symbols-outlined">
+        arrow_back
+    </span>
+    </button>
+</header>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="content">
+                <ul>
+                    <li class="pessoa" onclick="mostravalor(this)" data-idade="15" data-altura="157"> Nome:Felipe -</li>
+                    <li class="pessoa" onclick="mostravalor(this)" data-idade="76" data-altura="268"> Nome:Pablo -</li>
+                    <li class="pessoa" onclick="mostravalor(this)" data-idade="27" data-altura="379"> Nome:Vitin -</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
