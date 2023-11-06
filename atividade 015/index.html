@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @keyframes minhaAnimação {
+
+            0% {top: 100px;}
+            25% {top: 170px;}
+            75% {top: 150px;}
+            100% {top: 100px;}
+
+            100% {rotate: y 360deg;}
+
+            from {
+                left: 100px;
+            }
+
+            to {
+                left: 340px;
+                background-color: black;
+                border-radius: 700px;
+            }
+        }
+
+        .box {
+            position: relative;
+            background: red;
+            left: 1000px;
+            top: 100px;
+            width: 50px;
+            height: 300px;
+            animation: minhaAnimação 5s infinite;
+            animation-name: minhaAnimação;
+            animation-duration: 8s;
+            animation-iteration-count: 4;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .box:houver {
+            border: solid 15px rgb(129, 5, 245);
+            transition: border 3s 2s;
+            transition-duration: 0s;
+        }
+
+        @keyframes minhaAnimação1 {
+
+            0% {top: 0px;}
+            25% {top: 120px;}
+            75% {top: 150px;}
+            100% {top: -200px;}
+
+            100% {rotate: y 180deg;}
+
+            from {
+                right: 100px;
+            }
+
+            to {
+                left: 340px;
+                background-color: black;
+                border-radius: 500px;
+            }
+        }
+
+        .box1 {
+            position: relative;
+            background: rgb(140, 0, 255);
+            left: 1000px;
+            top: -200px;
+            width: 300px;
+            height: 50px;
+            animation: minhaAnimação 5s infinite;
+            animation-name: minhaAnimação1;
+            animation-duration: 8s;
+            animation-iteration-count: 4;
+            scale: 1 1;
+            animation: minhaAnimação1 5s infinite;
+        }
+
+        .box1:houver {
+            border: solid 15px rgb(129, 5, 245);
+            transition: border 3s 2s;
+            transition-duration: 0s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+    <div class="box1"></div>
+
+</body>
+
+</html>
