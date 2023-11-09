@@ -3,88 +3,150 @@
 
 <head>
     <style>
-        @keyframes minhaAnimação {
+        @keyframes go-back {
 
-            0% {top: 100px;}
-            25% {top: 170px;}
-            75% {top: 150px;}
-            100% {top: 100px;}
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
 
-            100% {rotate: y 360deg;}
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            100% {
+                rotate: X 360deg;
+            }
 
             from {
-                left: 100px;
+                left: 0;
+
             }
 
             to {
-                left: 340px;
-                background-color: black;
-                border-radius: 700px;
+                transform: translateX(1000px);
+                transform: rotate(360deg);
             }
         }
 
         .box {
-            position: relative;
+
             background: red;
-            left: 1000px;
-            top: 100px;
+            left: 500px;
+            top: 500px;
             width: 50px;
-            height: 300px;
-            animation: minhaAnimação 5s infinite;
-            animation-name: minhaAnimação;
+            height: 50px;
+            animation: go-back 5s infinite;
+            animation-name: go-back;
             animation-duration: 8s;
-            animation-iteration-count: 4;
-            margin: auto;
-            border: 1px solid black;
+            animation-iteration-count: 10;
+            animation: go-back 5s infinite;
+            border: 5px solid black;
         }
 
-        .box:houver {
-            border: solid 15px rgb(129, 5, 245);
-            transition: border 3s 2s;
-            transition-duration: 0s;
-        }
+        @keyframes go-back1 {
 
-        @keyframes minhaAnimação1 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
 
-            0% {top: 0px;}
-            25% {top: 120px;}
-            75% {top: 150px;}
-            100% {top: -200px;}
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
 
-            100% {rotate: y 180deg;}
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            100% {
+                rotate: x -360deg;
+            }
 
             from {
-                right: 100px;
+                transform: translateX(500px);
+
             }
 
             to {
-                left: 340px;
-                background-color: black;
-                border-radius: 500px;
+                transform: translateY(0px);
             }
+
+
         }
 
         .box1 {
-            position: relative;
+
             background: rgb(140, 0, 255);
-            left: 1000px;
-            top: -200px;
-            width: 300px;
+            width: 500px;
             height: 50px;
-            animation: minhaAnimação 5s infinite;
-            animation-name: minhaAnimação1;
+            animation: go-back1 5s infinite;
+            animation-name: go-back1;
             animation-duration: 8s;
             animation-iteration-count: 4;
-            scale: 1 1;
-            animation: minhaAnimação1 5s infinite;
+            animation: go-back1 5s infinite;
+            border: 5px solid black;
         }
 
-        .box1:houver {
-            border: solid 15px rgb(129, 5, 245);
-            transition: border 3s 2s;
-            transition-duration: 0s;
+        .rotação {
+            border: 5px solid hsl(0, 0%, 86%);
+            border-left-color: #cc0000;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
         }
 
+        @keyframes loading {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotação.is-animating {
+            animation: loading 5s linear infinite;
+        }
     </style>
 </head>
 
@@ -93,6 +155,8 @@
     <div class="box"></div>
 
     <div class="box1"></div>
+
+    <div class="rotação is-animating"></div>
 
 </body>
 
