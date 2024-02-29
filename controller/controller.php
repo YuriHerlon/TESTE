@@ -20,6 +20,24 @@ function outraFuncao(){
 	include '../view/templateOutraFuncao.php';
 }
 
+function formulario(){
+	include '../view/formulario.php';
+}
+
+function soma(){
+	$tipo = 'SOMA';
+	$n1 = '';
+	if(isset($_GET['n1']))
+		$n1 = $_GET['n1'];
+	$n2 = '';
+	if(isset($_GET['n2']))
+		$n2 = $_GET['n2'];	
+	
+     $resultado = $n1 + $n2 ;
+
+	include '../view/resultado.php';
+}
+
 function invalida(){
 	echo 'Opção Inválida';
 }
